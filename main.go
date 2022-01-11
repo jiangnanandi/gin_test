@@ -12,7 +12,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func hello() {
+	fmt.Println("Hello")
+}
+
 func main() {
+
 	defer log.Flush()
 	testConfig := `
 <seelog>
@@ -65,7 +70,7 @@ func fLimiter(limiter *limiter.Limiter) gin.HandlerFunc {
 }
 
 func cLimiter(c *gin.Context) {
-	c.String(200, "Hello, world!")
+	c.String(200, "Hello, world david!")
 	log.Trace("ok")
 }
 
